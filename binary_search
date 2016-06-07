@@ -1,0 +1,8 @@
+def bs(start,end,nums,target):
+  while start<end:
+    mid=(start+end)>>1
+    if nums[mid]<target:
+      start=mid+1
+    else:
+      end=mid
+  return start if nums[start]==target else -1
